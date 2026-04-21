@@ -70,4 +70,4 @@ jobs:
 
       - name: Deploy with Helm
         run: |
-          helm upgrade --install ui ./helm --set image.repository=ghcr.io/${{ env.OWNER_LC }}/preparesh-bookstore-ui --set image.tag=$TAG
+          helm upgrade --install ui ./helm --set image.repository=ghcr.io/${{ env.OWNER_LC }}/preparesh-bookstore-ui --set image.tag=$TAG --kubeconfig $HOME/.kube/config
